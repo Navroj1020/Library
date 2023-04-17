@@ -460,7 +460,7 @@ const books=[
     title: "The Lord of the Rings",
     author: "Scott Lobdell",
     subject: "Action",
-    thumbnail: "",
+    thumbnail: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F71jLBXtWJWL.jpg&tbnid=ocJRt8iZc8ZKKM&vet=12ahUKEwjH_vThuLH-AhU7-3MBHdxMDEkQMygEegUIARDkAQ..i&imgrefurl=https%3A%2F%2Fwww.amazon.in%2FLord-Rings-J-R-Tolkien%2Fdp%2F0544003411&docid=Qs4lznUsYF9zcM&w=1068&h=1600&q=The%20Lord%20of%20the%20Rings&ved=2ahUKEwjH_vThuLH-AhU7-3MBHdxMDEkQMygEegUIARDkAQ",
     publishedYear: "30-05-2023"
   },
   {
