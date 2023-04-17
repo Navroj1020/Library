@@ -460,7 +460,7 @@ const books=[
     title: "The Lord of the Rings",
     author: "Scott Lobdell",
     subject: "Action",
-    thumbnail: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F71jLBXtWJWL.jpg&tbnid=ocJRt8iZc8ZKKM&vet=12ahUKEwjH_vThuLH-AhU7-3MBHdxMDEkQMygEegUIARDkAQ..i&imgrefurl=https%3A%2F%2Fwww.amazon.in%2FLord-Rings-J-R-Tolkien%2Fdp%2F0544003411&docid=Qs4lznUsYF9zcM&w=1068&h=1600&q=The%20Lord%20of%20the%20Rings&ved=2ahUKEwjH_vThuLH-AhU7-3MBHdxMDEkQMygEegUIARDkAQ",
+    thumbnail: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780544003415_p0_v5_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D",
     publishedYear: "30-05-2023"
   },
   {
