@@ -3,7 +3,7 @@ import books from './books';
 import { InputGroup,Form } from 'react-bootstrap';
 import './style.css';
 
-
+// function to handle search query
 const Filters = () => {
        const searchRef=useRef(null)
         const [searchValue,setSearch]= useState('');
@@ -12,6 +12,7 @@ const Filters = () => {
             clear();
 
     }
+        // function that clears all the filter so it searches all the data instead of filtered dataset
 function clear(){
             setsubjects('');
             document.getElementById('ddlAuthor').selectedIndex=0
@@ -25,12 +26,13 @@ function clear(){
 
 
  
-   
+    //  function to handle selected author
    const [selectedAuthor,setauthor] = useState('');
    const changeAuthor = (e) =>{
     searchRef.current.value=''
     setauthor(e.target.value);
    }
+   //   function to handle selected date range
    const [selectedFromDate,setFromDate] = useState('');
    const changeFromDate = (e) =>{
     searchRef.current.value=''
@@ -43,14 +45,14 @@ function clear(){
    }
   
   
-   
+   //  function to handle selected subject
    const [selectedSubject,setsubjects] = useState('');
    const changeSubject = (e) =>{
     searchRef.current.value=''
     setsubjects(e.target.value);
    }
   
-   
+   //  the dataset is filtered according to the selected subject and author
   var searchRecords = books.filter(item => {
     if (
     (item.subject === selectedSubject && item.author === selectedAuthor)||
@@ -74,7 +76,7 @@ searchRecords = searchRecords.filter(item => {
 
  })};
  console.log(searchRecords)
- 
+ //  searched records are compared with the dataset and returns the true values
  if(searchValue!==''){
   searchRecords = books.filter(item => {
    
@@ -95,7 +97,7 @@ searchRecords = searchRecords.filter(item => {
 
 
   const [displayCount,setDisplayCount]=useState(10);
-
+ // scroll feature that loads more books as the user scrolls down the page
 
   useEffect(()=>{
     function handleScroll(){
@@ -138,6 +140,7 @@ searchRecords = searchRecords.filter(item => {
         <h5 className='title'>Filters</h5>
         <h6>Number Of Results Found: {recordsLength}</h6>
         <br/>
+               {/* dropdown to show the Authors */}
         <select id='ddlAuthor' placeholder='Select Author' onChange={changeAuthor}>
         <option value=''>Select Author</option>
         {authors.map((authors) => (
@@ -146,6 +149,7 @@ searchRecords = searchRecords.filter(item => {
         </select>
         <br/>       
         <div className='row'></div>
+{/* dropdown to show the subject of the book */}
         <select id='ddlSubject' placeholder='Select Subject' onChange={changeSubject}>
         <option value=''>Select Subject</option>
         {subject.map((subject) => (
@@ -154,6 +158,7 @@ searchRecords = searchRecords.filter(item => {
         </select>
         <br/> 
         <h5>Filter By Date</h5>
+{/* From and to dates to filter according to the published dates */}
         <label>From:</label>
         <input type="date" id='dtFromDate'  onChange={changeFromDate}></input>
         <br/>
@@ -163,7 +168,7 @@ searchRecords = searchRecords.filter(item => {
             </div>
             <div className='col-sm-9' >
         <div className='row'>
-       
+       {/* to display the filtered content after the filter is apllied else all the contents are displayed */}
             {searchRecords.slice(0,displayCount).map((values)=>{
                 const{publishedYear,title,subject,author,thumbnail,id}=values;
             return(
@@ -204,15 +209,13 @@ searchRecords = searchRecords.filter(item => {
 
 
 
-
+// gets unique data from the dataset and returns it to the drop down
 const authors = books.map(detail => detail.author)
   .filter((value, index, self) => self.indexOf(value) === index)
 
 const subject = books.map(detail => detail.subject)
   .filter((value, index, self) => self.indexOf(value) === index)
 
-// const title = books.map(detail => detail.title)
-//   .filter((value, index, self) => self.indexOf(value) === index)
 
 
 
