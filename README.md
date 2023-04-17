@@ -1,9 +1,9 @@
-##Library Management Page
+Library Management Page
 
 
 A simple library management page that allows users to see a list of books, filter the list based on Title, Author, Subject, and Publish-date, and perform paging on the list.
 
-#Setup Instructions
+Setup Instructions
 
 
 Clone the repository from Github: git clone https://github.com/username/library-management-page.git
@@ -17,7 +17,7 @@ DB_URI: the URI for your database
 
 Start the server: npm start
 
-#Running the Application
+Running the Application
 
 Open a web browser and navigate to http://localhost:<PORT>
 
