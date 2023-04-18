@@ -30,17 +30,20 @@ function clear(){
    const [selectedAuthor,setauthor] = useState('');
    const changeAuthor = (e) =>{
     searchRef.current.value=''
+    setSearch('')
     setauthor(e.target.value);
    }
    //   function to handle selected date range
    const [selectedFromDate,setFromDate] = useState('');
    const changeFromDate = (e) =>{
     searchRef.current.value=''
+    setSearch('')      
     setFromDate(e.target.value);
    }
    const [selectedToDate,setToDate] = useState('');
    const changeToDate = (e) =>{
     searchRef.current.value=''
+    setSearch('')      
     setToDate(e.target.value);
    }
   
@@ -49,6 +52,7 @@ function clear(){
    const [selectedSubject,setsubjects] = useState('');
    const changeSubject = (e) =>{
     searchRef.current.value=''
+    setSearch('')      
     setsubjects(e.target.value);
    }
   
